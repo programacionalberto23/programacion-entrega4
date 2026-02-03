@@ -1,15 +1,6 @@
 package Ejer_1;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author EAG
- */
+/*@author ALBERTO*/
 public class Vehiculo {
     private String matricula,marca,modelo;
     private boolean disponible;
@@ -17,31 +8,60 @@ public class Vehiculo {
     
     //CONSTRUCTORES
 
-//CONSTRUCTOR POR DEFECTO
+    //CONSTRUCTOR POR DEFECTO
 
-public Vehiculo(){
-    this.matricula = "";
-    this.marca = "";
-    this.modelo = "";
-    this.disponible = true;
-    this.empresa = null;
-}
+    public Vehiculo(){
+        this.matricula = "";
+        this.marca = "";
+        this.modelo = "";
+        this.disponible = true;
+        this.empresa = null;
+    }
 
-//CONSTRUCTOR POR PARÁMETROS
+    //CONSTRUCTOR POR PARÁMETROS
 
-public Vehiculo(String matricula, String marca, String modelo) {
-    this.matricula = matricula;
-    this.marca = marca;
-    this.modelo = modelo;
-    this.disponible = vehiculoDisponible;
-    this.empresa = Empresa;
-}
+    public Vehiculo(String matricula, String marca, String modelo, boolean vehiculoDisponible, Empresa empresa) {
+        this.matricula = matricula;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.disponible = vehiculoDisponible;
+        this.empresa = empresa;
+    }
 
-//CONSTRUCTOR DE COPIA
-public Vehiculo(Vehiculo vehiculo){
+    //CONSTRUCTOR DE COPIA
+
+    public Vehiculo(Vehiculo vehiculo){
     //COPIAS EL NOMBRE DEL VEHICULO
-    this.nombre = vehiculo.nombre;
-    //COPIAR TODOS LOS ATRUBUTOS
 
-}
+        this.matricula = vehiculo.matricula;
+        this.marca = vehiculo.marca;
+        this.modelo = vehiculo.modelo;
+        this.disponible = vehiculo.disponible;
+        this.empresa = vehiculo.empresa;
+    //COPIAR TODOS LOS ATRUBUTOS
+    }
+    // GETTERS
+      public String getMatricula(){
+        return this.matricula;
+      }
+      public String getMarca(){
+        return this.marca;
+      }
+      public boolean getDisponible(){
+        return this.disponible;
+      }
+    // SETTERS
+      public void setMatricula(String matricula){
+        this.matricula = matricula;
+      }
+      public void setMarca(String marca) {
+        this.marca = marca;
+      }
+      public void setModelo(String modelo) {
+        this.modelo = modelo;
+      }
+      public void setDisponible(boolean disponible) {
+        this.disponible = disponible;
+      }
+      
 }
